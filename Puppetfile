@@ -3,10 +3,11 @@ forge "http://forge.puppetlabs.com"
 # Modules from the Puppet Forge
 # Versions should be upmod dated to be the latest at the time you start
 mod "puppetlabs/inifile",     '1.5.0'
-mod "puppetlabs/stdlib",      '4.11.0'
+mod "puppetlabs/stdlib",      '4.17.1'
 mod "puppetlabs/concat",      '2.1.0'
 mod 'puppetlabs-mysql',       '3.11.0'
 mod 'puppet-staging',         '2.2.0'
+mod 'puppetlabs-ntp',         '6.2.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
