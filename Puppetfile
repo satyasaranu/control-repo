@@ -8,7 +8,9 @@ mod "puppetlabs/concat",      '2.1.0'
 mod 'puppetlabs-mysql',       '3.11.0'
 mod 'puppet-staging',         '2.2.0'
 mod 'puppetlabs-ntp',         '6.2.0'
-mod 'saz-resolv_conf',    '3.3.0'
+mod 'saz-resolv_conf',        '3.3.0'
+mod 'garethr-docker',         '5.3.0'
+mod 'puppetlabs-docker_platform', '2.2.1'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
