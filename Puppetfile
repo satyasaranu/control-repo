@@ -9,6 +9,7 @@ mod 'puppetlabs-mysql',       '3.11.0'
 mod 'puppet-staging',         '2.2.0'
 mod 'puppetlabs-ntp',         '6.2.0'
 
+
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 #mod 'apache',
