@@ -30,3 +30,16 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+node ubntupupcli03.saranu.local {
+ docker::image { 'ubuntu':
+  ensure      => 'present',
+  image_tag   => 'precise',
+  docker_file => '/tmp/Dockerfile',
+  }
+  docker::run { 'helloworld':
+  image   => 'ubuntu:precise',
+  command => '/bin/sh -c "while true; do echo hello world; sleep 1; done"',
+  }
+
+}
