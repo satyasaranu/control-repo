@@ -16,6 +16,7 @@ mod 'stahnma-epel',           '1.2.2'
 mod 'puppetlabs-motd',        '1.5.1'
 mod 'puppetlabs-tomcat',      '2.1.0'
 mod 'puppet-archive',         '1.3.0'
+mod 'puppetlabs-java',        '2.1.1'
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 #mod 'apache',
