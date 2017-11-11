@@ -43,7 +43,6 @@ node ubntupupcli03.saranu.local {
   }
 }
 node puppetnode02.saranu.local {
-class { '::tomcat': }
 class { '::java': }
 
 tomcat::install { '/opt/tomcat9':
