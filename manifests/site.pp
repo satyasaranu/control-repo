@@ -43,15 +43,30 @@ node ubntupupcli03.saranu.local {
   }
 }
 node puppetnode02.saranu.local {
+class { 'java': }
 class { '::tomcat': }
-class { '::epel': }
--> tomcat::instance { 'default':
-  install_from_source => false,
-  package_name        => 'tomcat',
+tomcat::install { '/opt/tomcat9':
+  source_url => 'https://www.apache.org/dist/tomcat/tomcat-9/v9.0.x/bin/apache-tomcat-9.0.x.tar.gz'
 }
--> tomcat::service { 'default':
-  use_jsvc     => false,
-  use_init     => true,
-  service_name => 'tomcat',
-  }
+tomcat::instance { 'tomcat9-first':
+  catalina_home => '/opt/tomcat9',
+  catalina_base => '/opt/tomcat9/first',
+}
+tomcat::instance { 'tomcat9-second':
+  catalina_home => '/opt/tomcat9',
+  catalina_base => '/opt/tomcat9/second',
+}
+# Change the default port of the second instance server and HTTP connector
+tomcat::config::server { 'tomcat9-second':
+  catalina_base => '/opt/tomcat9/second',
+  port          => '8006',
+}
+tomcat::config::server::connector { 'tomcat9-second-http':
+  catalina_base         => '/opt/tomcat9/second',
+  port                  => '8081',
+  protocol              => 'HTTP/1.1',
+  additional_attributes => {
+    'redirectPort' => '8443'
+  },
+}
 }
