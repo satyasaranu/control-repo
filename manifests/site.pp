@@ -47,7 +47,7 @@ class { '::tomcat': }
 class { '::java': }
 
 tomcat::install { '/opt/tomcat9':
-  source_url => 'https://www.apache.org/dist/tomcat/tomcat-9/v9.0.x/bin/apache-tomcat-9.0.x.tar.gz'
+  source_url => 'https://www.apache.org/dist/tomcat/tomcat-9/v9.0.1/bin/apache-tomcat-9.0.1.tar.gz'
 }
 tomcat::instance { 'tomcat9-first':
   catalina_home => '/opt/tomcat9',
